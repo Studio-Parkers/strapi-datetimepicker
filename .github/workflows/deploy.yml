@@ -17,13 +17,10 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@master
-      - name: get version name
-        id: version
-        run: echo "::set-output name=version::${GITHUB_REF_NAME##*/}"
       - name: bump version
         uses: dmikey/package-json-version@v0.0.2
         with:
-          version: ${{ steps.version.outputs.version }}
+          version: ${{ github.ref_name }}
           git-tag-version: true
   
   publish:
@@ -32,3 +29,5 @@ jobs:
     steps:
       - name: Publish
         run: echo "todo publish module npm"
+      - name: Test
+        run: cat package.json
