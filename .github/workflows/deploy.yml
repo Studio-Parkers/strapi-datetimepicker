@@ -15,12 +15,15 @@ jobs:
     name: Bump package.json version
     runs-on: ubuntu-latest
     steps: 
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@master
+      - name: get version name
+        id: version
+        run: echo "::set-output name=version::${GITHUB_REF_NAME##*/}"
       - name: bump version
         uses: dmikey/package-json-version@v0.0.2
         with:
-          version: ${{ github.event.release.tag_name }}
+          version: ${{ steps.version.outputs.version }}
           git-tag-version: true
   
   publish:
