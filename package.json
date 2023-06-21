@@ -1,6 +1,6 @@
 {
     "name": "@strapi/datetimepicker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A user-friendly DateTimePicker component",
     "strapi": {
         "name": "DateTimePicker",
@@ -34,9 +34,11 @@
     "author": {
         "name": "Dani Krokkee"
     },
-    "maintainers": [{
-        "name": "Dani Krokkee"
-    }],
+    "maintainers": [
+        {
+            "name": "Dani Krokkee"
+        }
+    ],
     "engines": {
         "node": "18",
         "npm": ">=6.0.0"
