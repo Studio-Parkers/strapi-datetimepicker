@@ -20,7 +20,7 @@ jobs:
       - name: bump version
         uses: dmikey/package-json-version@v0.0.2
         with:
-          version: ${{ github.ref }}
+          version: ${{ github.event.release.tag_name }}
           git-tag-version: true
   
   publish:
