@@ -17,6 +17,7 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@master
+
       - name: bump version
         uses: dmikey/package-json-version@v0.0.2
         with:
@@ -25,8 +26,18 @@ jobs:
   publish:
     name: Publish module
     runs-on: ubuntu-latest
+    needs: version_bump
     steps:
-      - name: Publish
-        run: echo "todo publish module npm"
-      - name: Test
-        run: cat ./package.json
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+          registry-url: https://registry.npmjs.org
+          cache: yarn
+
+      - uses: simenandre/publish-with-yarn@v1
+        with:
+          npm-auth-token: ${{ secrets.NPM_TOKEN }}
