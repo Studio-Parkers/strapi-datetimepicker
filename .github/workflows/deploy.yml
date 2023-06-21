@@ -47,6 +47,6 @@ jobs:
 
       - name: Publish
         shell: bash
-        run: yarn publish
+        run: yarn publish --tag ${{ github.ref_name }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
