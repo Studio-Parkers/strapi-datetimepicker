@@ -42,7 +42,7 @@ export default {
                 items: [{
                     name: "options.hourInterval",
                     type: "number",
-                    value: "1",
+                    defaultValue: "1",
                     intlLabel: {
                         id: getTrad("datetimepicker.options.hourInterval"),
                         defaultMessage: "Hour intervals",
@@ -55,7 +55,7 @@ export default {
                 {
                     name: "options.minuteInterval",
                     type: "number",
-                    value: "1",
+                    defaultValue: "1",
                     intlLabel: {
                         id: getTrad("datetimepicker.options.minuteInterval"),
                         defaultMessage: "Minute intervals",
