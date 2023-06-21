@@ -38,6 +38,6 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: yarn
 
-      - uses: simenandre/publish-with-yarn@v1
+      - uses: simenandre/publish-with-yarn-classic@v1
         with:
           npm-auth-token: ${{ secrets.NPM_TOKEN }}
