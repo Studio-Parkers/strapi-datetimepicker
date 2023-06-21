@@ -21,7 +21,6 @@ jobs:
         uses: dmikey/package-json-version@v0.0.2
         with:
           version: '${{ github.ref_name }}'
-          git-tag-version: 'true'
   
   publish:
     name: Publish module
