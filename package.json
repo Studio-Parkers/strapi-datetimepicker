@@ -1,6 +1,6 @@
 {
     "name": "@strapi/datetimepicker",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "A user-friendly DateTimePicker component",
     "strapi": {
         "name": "DateTimePicker",
