@@ -1,4 +1,5 @@
 # Strapi plugin datetimepicker
+![Screenshot 2023-06-21 at 11 37 30](https://github.com/danivdwerf/strapi-datetimepicker/assets/15921568/fbfc0216-b69d-4689-abba-d45a5f27ee8a)
 
 This plugin offers a more user friendly datetime picker.
 
