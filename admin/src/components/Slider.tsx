@@ -52,7 +52,7 @@ const Container = styled.div`
  */
 const Slider = ({value, min = 0, max = 1, onChange}: {value: number, min: number, max: number, onChange: Function})=>
 {
-    const ref = React.useRef<HTMLDivElement>();
+    const ref = React.useRef<HTMLDivElement>(null);
 
     /**
      * Is the user currently holding the slider handle.
@@ -77,7 +77,7 @@ const Slider = ({value, min = 0, max = 1, onChange}: {value: number, min: number
      * 
      * @param {TouchEvent} e 
      */
-    const onTouchMove = e=>
+    const onTouchMove = (e: TouchEvent)=>
         e.preventDefault();
 
     /**
