@@ -29,24 +29,16 @@ jobs:
             commit_message: "chore: release ${{ github.ref_name }}"
             branch: ${{ github.event.repository.default_branch }}
             file_pattern: package.json
-    
-  publish:
-    name: Publish module
-    runs-on: ubuntu-latest
-    needs: version_bump
-    steps:
-      - name: checkout
-        uses: actions/checkout@master
 
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 18.16.0
-          registry-url: https://registry.npmjs.org
-          cache: yarn
+            node-version: 18.16.0
+            registry-url: https://registry.npmjs.org
+            cache: yarn
 
       - name: Publish
         shell: bash
-        run: yarn publish --tag ${{ github.ref_name }}
+        run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
