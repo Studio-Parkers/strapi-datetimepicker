@@ -20,8 +20,8 @@ jobs:
       - name: bump version
         uses: dmikey/package-json-version@v0.0.2
         with:
-          version: ${{ github.ref_name }}
-          git-tag-version: true
+          version: '${{ github.ref_name }}'
+          git-tag-version: 'true'
   
   publish:
     name: Publish module
@@ -30,4 +30,4 @@ jobs:
       - name: Publish
         run: echo "todo publish module npm"
       - name: Test
-        run: cat package.json
+        run: cat ./package.json
