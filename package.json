@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A user-friendly DateTimePicker component",
     "strapi": {
-        "name": "DateTimePicker",
+        "name": "datetimepicker",
         "description": "A user-friendly DateTimePicker component",
         "kind": "plugin"
     },
