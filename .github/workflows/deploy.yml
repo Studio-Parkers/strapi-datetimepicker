@@ -1,0 +1,31 @@
+name: Production release
+
+# Cancel previous workflows
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  release:
+    types: 
+      - released
+
+jobs:
+  version_bump:
+    name: Bump package.json version
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: bump version
+        uses: dmikey/package-json-version@v0.0.2
+        with:
+          version: ${{ github.ref }}
+          git-tag-version: true
+  
+  publish:
+    name: Publish module
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish
+        run: echo "todo publish module npm"
