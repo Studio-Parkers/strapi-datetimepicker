@@ -1,11 +1,15 @@
 {
-    "name": "@strapi/datetimepicker",
+    "name": "strapi-datetimepicker",
     "version": "1.0.0",
     "description": "A user-friendly DateTimePicker component",
     "strapi": {
         "name": "DateTimePicker",
         "description": "A user-friendly DateTimePicker component",
         "kind": "plugin"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/danivdwerf/strapi-datetimepicker.git"
     },
     "dependencies": {
         "@strapi/design-system": "^1.6.3",

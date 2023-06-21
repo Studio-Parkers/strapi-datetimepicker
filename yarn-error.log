@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/danivanderwerf/.nvm/versions/node/v18.16.0/bin/node /Users/danivanderwerf/.yarn/bin/yarn.js publish
+  /Users/danivanderwerf/.nvm/versions/node/v18.16.0/bin/node /Users/danivanderwerf/.yarn/bin/yarn.js publish --access=public
 
 PATH: 
   /Users/danivanderwerf/.yarn/bin:/Users/danivanderwerf/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/Users/danivanderwerf/.nvm/versions/node/v18.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.npm-global/bin:/usr/local/share/dotnet:/usr/local/mysql/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/danivanderwerf/Library/Android/sdk/emulator:/Users/danivanderwerf/Library/Android/sdk/tools:/Users/danivanderwerf/Library/Android/sdk/tools/bin:/Users/danivanderwerf/Library/Android/sdk/platform-tools
