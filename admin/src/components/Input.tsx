@@ -285,20 +285,20 @@ export default ({name, attribute, onChange, value})=>
                         
                         <div>
                             <SliderLabel>hours</SliderLabel>
-                            <Slider value={date.getHours()} min={0} max={23} onChange={(e: number)=>
+                            <Slider value={date.getHours() / attribute.options.hourInterval} min={0} max={Math.floor(23 / attribute.options.hourInterval)} onChange={(e: number)=>
                             {
                                 const d = new Date(date);
-                                d.setHours(Math.round(e));
+                                d.setHours(Math.round(e) * attribute.options.hourInterval);
                                 updateValue(d);
                             }} />
                         </div>
 
                         <div>
                             <SliderLabel>minutes</SliderLabel>
-                            <Slider value={date.getMinutes()} min={0} max={59} onChange={(e: number)=>
+                            <Slider value={date.getMinutes() / attribute.options.minuteInterval} min={0} max={Math.floor(59 / attribute.options.minuteInterval)} onChange={(e: number)=>
                             {
                                 const d = new Date(date);
-                                d.setMinutes(Math.round(e));
+                                d.setMinutes(Math.round(e) * attribute.options.minuteInterval);
                                 updateValue(d);
                             }} />
                         </div>
