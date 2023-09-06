@@ -112,11 +112,25 @@ const SliderLabel = styled.label`
     margin-bottom: 0.5rem;
 `;
 
-const locale = "en-GB";
-const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+const getWeekDays = (locale: string): string[]=>
+{
+    const baseDate = new Date(Date.UTC(2017, 0, 2));
+    const weekDays = [];
+    for(let i = 0; i < 7; i++)
+    {       
+        weekDays.push(baseDate.toLocaleDateString(locale, {weekday: "long"}));
+        baseDate.setDate(baseDate.getDate() + 1);       
+    }
+
+    return weekDays;
+}
 
 export default ({name, attribute, onChange, value})=>
 {
+    const locale = attribute.options.locale;
+    const dayNames = getWeekDays(locale);
+
     const ref = useRef<HTMLDivElement>(null);
     const [selectorActive, setSelectorActive] = useState<boolean>(false);
 
