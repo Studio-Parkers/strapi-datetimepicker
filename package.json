@@ -3,7 +3,8 @@
     "version": "1.1.0",
     "description": "User-friendly date time picker",
     "strapi": {
-        "name": "DateTimePicker",
+        "name": "date-time-picker",
+        "displayName": "DateTimePicker",
         "description": "User-friendly date time picker",
         "kind": "plugin"
     },
