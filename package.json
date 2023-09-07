@@ -1,10 +1,10 @@
 {
     "name": "strapi-date-time-picker",
     "version": "1.1.0",
-    "description": "A user-friendly DateTimePicker component",
+    "description": "User-friendly date time picker",
     "strapi": {
-        "name": "datetimepicker",
-        "description": "A user-friendly DateTimePicker component",
+        "name": "DateTimePicker",
+        "description": "User-friendly date time picker",
         "kind": "plugin"
     },
     "repository": {
