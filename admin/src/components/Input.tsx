@@ -3,6 +3,10 @@ import {IconButton} from "@strapi/design-system";
 import {ArrowLeft, ArrowRight} from "@strapi/icons";
 import React, {useState, useRef, useEffect, MouseEvent} from "react";
 
+// Types
+import type {JSX} from "react";
+
+// Components
 import Slider from "./Slider";
 
 const Container = styled.div`
@@ -116,7 +120,7 @@ const SliderLabel = styled.label`
 const getWeekDays = (locale: string): string[]=>
 {
     const baseDate = new Date(Date.UTC(2017, 0, 2));
-    const weekDays = [];
+    const weekDays: string[] = [];
     for(let i = 0; i < 7; i++)
     {       
         weekDays.push(baseDate.toLocaleDateString(locale, {weekday: "long"}));
@@ -171,10 +175,10 @@ export default ({name, attribute, onChange, value})=>
         const monthInfo = new Date(date.getFullYear(), currentMonth + 1, 0);
         const len = Math.ceil(monthInfo.getDate() / 6);
 
-        const rows = [];
+        const rows: JSX.Element[] = [];
         for(let i = 0; i < len; i++)
         {
-            const columns = [];
+            const columns: JSX.Element[] = [];
             for(let j = 0; j < 7; j++)
             {
                 const d = new Date(monthInfo);
