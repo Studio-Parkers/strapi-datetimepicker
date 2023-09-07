@@ -1,12 +1,5 @@
-/**
- *
- * PluginIcon
- *
- */
+import React from "react";
+import {Calendar} from "@strapi/icons";
+import {Icon} from "@strapi/design-system";
 
-import React from 'react';
-import { Puzzle } from '@strapi/icons';
-
-const PluginIcon = () => <Puzzle />;
-
-export default PluginIcon;
+export default ()=> <Icon color="neutral1000" as={Calendar} />;
