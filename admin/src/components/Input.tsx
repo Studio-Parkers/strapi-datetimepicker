@@ -41,6 +41,7 @@ const DateTimePreviewItem = styled.label`
 const DateTimeModal = styled.div`
     top: 0px;
     left: 0px;
+    z-index: 9;
     right: 0px;
     max-width: 400px;
     position: absolute;
